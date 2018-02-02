@@ -46,7 +46,7 @@ class Registration extends Component {
         fieldValidationErrors.name = nameValid ? '' : ' is invalid';
         break;
       case 'phone':
-        phoneValid = value.match(/^[0-9]+$/);
+        phoneValid = value.match(/^[0-9]+$/) && value.length==10;
         fieldValidationErrors.phone = phoneValid ? '' : ' is invalid';
         break;
       case 'email':
